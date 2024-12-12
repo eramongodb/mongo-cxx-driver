@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="shortcut icon" href="https://mongocxx.org/img/favicon.png">
+
+    <title>Page Not Found</title>
+
+    <link rel="canonical" href="https://mongocxx.org/404.html" />
+    <script type="text/javascript">
+        var milliseconds = 5000;
+
+        function redirect() {
+            if (window.location.pathname.startsWith("/api/")) {
+                // Redirect to current API homepage.
+                window.location.assign(window.location.href.split('/api/')[0] + '/api/current')
+            } else {
+                // Redirect to website homepage.
+                window.location.assign(window.location.origin)
+            }
+        }
+
+        setTimeout(redirect, milliseconds);
+    </script>
+</head>
+
+<body>
+    <p>This page cannot be found. Automatically redirecting in a few seconds...</p>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-JQHP" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-56KD6L3MDX"></script>
+</body>
+
+</html>
